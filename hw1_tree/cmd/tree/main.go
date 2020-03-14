@@ -7,7 +7,7 @@ import (
 	"github.com/LuLStackCoder/golang-webservices-part-1/hw1_tree/pkg/tree"
 )
 
-// dirTree
+// dirTree is a function that create tree and render in in output
 func dirTree(out io.Writer, path string, printFiles bool) (err error) {
 	fileTree := tree.NewTree(path, printFiles)
 	fileTree.RenderTree(out, []string{""}, fileTree.Root())

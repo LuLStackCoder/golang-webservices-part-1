@@ -12,14 +12,14 @@ const (
 	sep = string(os.PathSeparator)
 	eof = "\n"
 
-	defPrefix  = "│  "
-	lastPrefix = "  "
+	defPrefix  = "│\t"
+	lastPrefix = "\t"
 
 	startLine = "├───"
 	endLine   = "└───"
 )
 
-// Tree
+// Tree interface implemented the tree
 type Tree interface {
 	RenderTree(out io.Writer, prefix []string, nd *node)
 	Root() *node
@@ -29,16 +29,16 @@ type tree struct {
 	root *node
 }
 
-// Root ...
+// Root returns the root
 func (t *tree) Root() *node {
 	return t.root
 }
 
-// RenderTree ...
-func (t *tree) RenderTree(out io.Writer, prefix []string, nd *node) {
+// RenderTree walk from whole tree and render the tree path recursively
+func (t *tree) RenderTree(out io.Writer, prefix []string, node *node) {
 	var lvlPrefix string
-	for i, v := range nd.children {
-		if i == len(nd.children)-1 {
+	for i, v := range node.children {
+		if i == len(node.children)-1 {
 			lvlPrefix = lastPrefix
 			io.WriteString(out, strings.Join(prefix, ""))
 			io.WriteString(out, endLine)
@@ -62,22 +62,22 @@ func NewTree(path string, withFiles bool) Tree {
 	if err != nil {
 		return nil
 	}
-	root := newNode(path, true, BuildTree(path, files, withFiles))
+	root := newNode(path, true, buildTree(path, files, withFiles))
 	return &tree{
 		root: root,
 	}
 }
 
-// BuildTree ...
-func BuildTree(path string, files []os.FileInfo, withFiles bool) (nodes []*node) {
+// buildTree build the path tree recursively
+func buildTree(path string, files []os.FileInfo, withFiles bool) (nodes []*node) {
 	for _, v := range files {
+		var childFiles []os.FileInfo
 		name := v.Name()
 		isDir := v.IsDir()
-		var childFiles []os.FileInfo
 		node := &node{}
 		if isDir {
 			childFiles, _ = ioutil.ReadDir(path + sep + name)
-			node = newNode(name, isDir, BuildTree(path+sep+name, childFiles, withFiles))
+			node = newNode(name, isDir, buildTree(path+sep+name, childFiles, withFiles))
 			nodes = append(nodes, node)
 		} else if withFiles {
 			size := v.Size()

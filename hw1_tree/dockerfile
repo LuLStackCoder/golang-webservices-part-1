@@ -1,4 +1,12 @@
 # docker build -t mailgo_hw1 .
 FROM golang:1.9.2
+
+RUN go get -u golang.org/x/lint/golint
+
+WORKDIR /go/src/github.com/LuLStackCoder/golang-webservices-part-1/hw1_tree
 COPY . .
-RUN go test -v
+
+RUN go fmt ./...
+RUN go vet ./...
+RUN go test ./... -v
+RUN golint -set_exit_status $(go list ./...)
