@@ -1,0 +1,25 @@
+mode: set
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:79.80,83.19 2 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:86.2,86.20 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:89.2,89.20 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:94.2,106.16 10 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:112.2,115.25 3 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:132.2,134.16 3 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:138.2,139.28 2 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:146.2,146.21 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:83.19,85.3 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:86.20,88.3 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:89.20,91.3 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:106.16,107.54 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:110.3,110.50 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:107.54,109.4 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:116.31,117.44 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:118.38,119.53 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:120.29,123.17 3 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:126.3,126.44 1 0
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:129.3,129.73 1 0
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:123.17,125.4 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:126.44,128.4 1 0
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:134.16,136.3 1 1
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:139.28,142.3 2 0
+/Users/artem/Documents/Go/golang-webservices-part-1/hw4_test_coverage/client.go:142.8,144.3 1 1
